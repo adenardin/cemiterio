@@ -1,0 +1,40 @@
+<table class="table" *ngIf="moradores">
+    <thead>
+      <tr>
+        <th scope="col">cpf</th>
+        <th scope="col">data_falecimento</th>
+        <th scope="col">data_nascimento</th>
+        <th scope="col">data_para_pagamento</th>
+        <th scope="col">data_sepultamento</th>
+        <th scope="col">data_ultimo_pagamento</th>
+        <th scope="col">ender_resp</th>
+        <th scope="col">id</th>
+        <th scope="col">id_jazigo</th>
+        <th scope="col">nome</th>
+        <th scope="col">nome_resp</th>
+        <th scope="col">num_cert_obito</th>
+        <th scope="col">obs</th>
+        <th scope="col">sexo</th>
+        <th scope="col">tel_resp</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let morador of moradores">
+        <td>{{morador.cpf}}</td>
+        <td>{{morador.data_falecimento}}</td>
+        <td>{{morador.data_nascimento}}</td>
+        <td>{{morador.data_para_pagamento}}</td>
+        <td>{{morador.data_sepultamento}}</td>
+        <td>{{morador.data_ultimo_pagamento}}</td>
+        <td>{{morador.ender_resp}}</td>
+        <td>{{morador.id}}</td>
+        <td>{{morador.id_jazigo}}</td>
+        <td>{{morador.nome}}</td>
+        <td>{{morador.nome_resp}}</td>
+        <td>{{morador.num_cert_obito}}</td>
+        <td>{{morador.obs}}</td>
+        <td>{{morador.sexo}}</td>
+        <td>{{morador.tel_resp}}</td>
+      </tr>
+    </tbody>
+  </table>
