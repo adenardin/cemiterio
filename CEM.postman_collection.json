@@ -1,0 +1,627 @@
+{
+	"info": {
+		"_postman_id": "7d7f56af-7d52-41d8-9c15-0b068fbc7025",
+		"name": "CEM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": " Test Man",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": " test@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": " secret",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": " secret",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": " test@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": " secret",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accessing an unprotected route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/open",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"open"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Access a protected endpoint",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MTgxOTUyNiwiZXhwIjoxNTYxODIzMTI2LCJuYmYiOjE1NjE4MTk1MjYsImp0aSI6IlpXcXllTnlZdG91RHpZZm4iLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.ihMnNvRwIbSsIW7lb6r93CGJCL5kJpgk6jSXOqjSD9Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/user",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Morador",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MTg1NzY5NSwiZXhwIjoxNTYxODYxMjk1LCJuYmYiOjE1NjE4NTc2OTUsImp0aSI6IjVwYkdqS3VjWmlaZkZkVWciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Q9ZsIwuUKAoP4vLU7fT_7Gst7aCDLeFGwI0Fzka0hKE"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": " Anderson Denardin",
+							"type": "text"
+						},
+						{
+							"key": "data_nascimento",
+							"value": " 2019-03-02",
+							"type": "text"
+						},
+						{
+							"key": "num_cert_obito",
+							"value": " 123",
+							"type": "text"
+						},
+						{
+							"key": "cpf",
+							"value": " 00850835003",
+							"type": "text"
+						},
+						{
+							"key": "data_falecimento",
+							"value": " 2019-03-02",
+							"type": "text"
+						},
+						{
+							"key": "data_sepultamento",
+							"value": " 2019-03-02",
+							"type": "text"
+						},
+						{
+							"key": "sexo",
+							"value": " M",
+							"type": "text"
+						},
+						{
+							"key": "nome_resp",
+							"value": " Ketrin",
+							"type": "text"
+						},
+						{
+							"key": "ender_resp",
+							"value": " Protasio",
+							"type": "text"
+						},
+						{
+							"key": "tel_resp",
+							"value": " 99999999",
+							"type": "text"
+						},
+						{
+							"key": "data_para_pagamento",
+							"value": " 2019-03-02",
+							"type": "text"
+						},
+						{
+							"key": "data_ultimo_pagamento",
+							"value": " 2019-03-02",
+							"type": "text"
+						},
+						{
+							"key": "obs",
+							"value": " Teste",
+							"type": "text"
+						},
+						{
+							"key": "id_jazigo",
+							"value": " 1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/registrarMorador",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"registrarMorador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Morador",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MTg2MDQ0MCwiZXhwIjoxNTYxODY0MDQwLCJuYmYiOjE1NjE4NjA0NDAsImp0aSI6ImdzeEV6S0RjRG5ZT3dQZkciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.8Yf0KcT2pWFS0--Wi6ApDd5uTCJEsKKJiZKIJOAcreI"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": " Ketrin Natalie",
+							"type": "text"
+						},
+						{
+							"key": "data_nascimento",
+							"value": " 2019-03-02",
+							"type": "text"
+						},
+						{
+							"key": "num_cert_obito",
+							"value": " 123",
+							"type": "text"
+						},
+						{
+							"key": "cpf",
+							"value": " 00850835003",
+							"type": "text"
+						},
+						{
+							"key": "data_falecimento",
+							"value": " 2019-03-02",
+							"type": "text"
+						},
+						{
+							"key": "data_sepultamento",
+							"value": " 2019-03-02",
+							"type": "text"
+						},
+						{
+							"key": "sexo",
+							"value": " M",
+							"type": "text"
+						},
+						{
+							"key": "nome_resp",
+							"value": " Ketrin",
+							"type": "text"
+						},
+						{
+							"key": "ender_resp",
+							"value": " Protasio",
+							"type": "text"
+						},
+						{
+							"key": "tel_resp",
+							"value": " 99999999",
+							"type": "text"
+						},
+						{
+							"key": "data_para_pagamento",
+							"value": " 2019-03-02",
+							"type": "text"
+						},
+						{
+							"key": "data_ultimo_pagamento",
+							"value": " 2019-03-02",
+							"type": "text"
+						},
+						{
+							"key": "obs",
+							"value": " Teste",
+							"type": "text"
+						},
+						{
+							"key": "id_jazigo",
+							"value": " 1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/atualizarMorador/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"atualizarMorador",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Morador",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MTg2MDQ0MCwiZXhwIjoxNTYxODY0MDQwLCJuYmYiOjE1NjE4NjA0NDAsImp0aSI6ImdzeEV6S0RjRG5ZT3dQZkciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.8Yf0KcT2pWFS0--Wi6ApDd5uTCJEsKKJiZKIJOAcreI"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/deletarMorador/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deletarMorador",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Selecionar Todos Moradores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MTg2NTM1NiwiZXhwIjoxNTYxODY4OTU2LCJuYmYiOjE1NjE4NjUzNTYsImp0aSI6IldzM0YyMGVwc0xpNHZ5cUIiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.ao1BUzjIhff5UmGJ_ZTFNfYkXweJpxrZ4fE1E0LY5os"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/selecionarTodosMoradores",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"selecionarTodosMoradores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Jazigos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MTgzNzkwNywiZXhwIjoxNTYxODQxNTA3LCJuYmYiOjE1NjE4Mzc5MDcsImp0aSI6InREaGo4ZngzS1UzZWRsNlEiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.zayxef9tF_2TXk2Ot40eXTaItuJnPc6tEkOarJ0wtmM"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "capacidade",
+							"value": " 2",
+							"type": "text"
+						},
+						{
+							"key": "disponivel",
+							"value": " 0",
+							"type": "text"
+						},
+						{
+							"key": "valor",
+							"value": "102.34",
+							"type": "text"
+						},
+						{
+							"key": "moradores_id",
+							"value": " 1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/registrarJazigos",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"registrarJazigos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Jazigos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MTg2MzExMiwiZXhwIjoxNTYxODY2NzEyLCJuYmYiOjE1NjE4NjMxMTIsImp0aSI6ImtuMWlHSzBIYXAzNlNtQmgiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ._Xkj64FU7Hok5Ukjx4SPEqpziv12gDV_JE-nfo5xvYg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "capacidade",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "disponivel",
+							"value": " 0",
+							"type": "text"
+						},
+						{
+							"key": "valor",
+							"value": "102.34",
+							"type": "text"
+						},
+						{
+							"key": "moradores_id",
+							"value": " 1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/atualizarJazigos/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"atualizarJazigos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Jazigos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MTg2NTM1NiwiZXhwIjoxNTYxODY4OTU2LCJuYmYiOjE1NjE4NjUzNTYsImp0aSI6IldzM0YyMGVwc0xpNHZ5cUIiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.ao1BUzjIhff5UmGJ_ZTFNfYkXweJpxrZ4fE1E0LY5os"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/deletarJazigos/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deletarJazigos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Selecionar Todos Jazigos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MTg2NTM1NiwiZXhwIjoxNTYxODY4OTU2LCJuYmYiOjE1NjE4NjUzNTYsImp0aSI6IldzM0YyMGVwc0xpNHZ5cUIiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.ao1BUzjIhff5UmGJ_ZTFNfYkXweJpxrZ4fE1E0LY5os"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/selecionarTodosJazigos",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"selecionarTodosJazigos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MDEyNjQ2MSwiZXhwIjoxNTYwMTMwMDYxLCJuYmYiOjE1NjAxMjY0NjEsImp0aSI6IjBSNDlPN1ZnRlZsOUR6ekIiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Ttf0M4vbofxxDp25UvOpVFSNwxibifkDAMdbcL2IF0Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/closed",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"closed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
