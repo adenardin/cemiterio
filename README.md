@@ -33,7 +33,9 @@ Executar o seguinte comando para baixar aplicação:
 
 git clone https://github.com/adenardin/cemiterio.git
 
-Editar arquivo .env
+Copiar arquivo .env.example para .env
+
+Editar entradas de banco de dados.
 ```php
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
