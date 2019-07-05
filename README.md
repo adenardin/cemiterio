@@ -44,6 +44,12 @@ DB_DATABASE=cemiterio
 DB_USERNAME=<seu usuario>
 DB_PASSWORD=<sua senha>
 ```
+Executar os comandos na raiz da aplicação:
+
+php artisan key:generate
+
+php artisan config:cache
+
 ## Banco de Dados MySQL 
 ### Versão 5.7
 O banco de dados está disponível no arquivo de dump cemiterio.sql. Na raíz do projeto.
